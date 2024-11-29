@@ -1,116 +1,83 @@
-/* Estilo base para a página */
+/* Estilos gerais do corpo da página */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo escuro como fallback */
+    background-image: url('Dark-Souls-1-banner-1.png'); /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-attachment: fixed; /* Fixa a imagem ao rolar */
+    color: #eee; /* Texto claro para contraste */
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #fff;
-    text-align: center;
 }
 
-/* Estilo do cabeçalho (Banner) */
+/* Estilo do cabeçalho */
 header {
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semitransparente */
+    color: #fff; /* Texto branco */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil */
 }
 
-.banner {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 5px solid #c1c1c1;
+header h1 {
+    font-size: 28px;
+    margin: 0;
 }
 
-.banner-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
-    font-weight: bold;
-    color: #c1c1c1;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Seção de Gavetas (Accordion) */
-.accordion-container {
-    margin-top: 30px;
-}
-
-.accordion {
-    background-color: #333;
+/* Navegação (menu) */
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro para a navegação */
     color: white;
-    cursor: pointer;
-    padding: 15px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    font-size: 1.2em;
-    transition: 0.4s;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px 0;
 }
 
-.accordion:hover {
-    background-color: #444;
-}
-
-.panel {
-    padding: 10px;
-    background-color: #222;
-    display: none;
-    overflow: hidden;
-    font-size: 1em;
-    color: #c1c1c1;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-/* Estilo do botão Bonfire */
-.bonfire-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+nav a {
+    color: white;
     text-decoration: none;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    position: fixed;
-    bottom: 20px; /* Distância do fundo */
-    right: 20px;  /* Distância da direita */
-    z-index: 100;  /* Coloca o botão acima de outros elementos */
+    margin: 0 20px;
+    font-size: 18px;
 }
 
-.bonfire-image {
-    width: 60px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
+nav a:hover {
+    text-decoration: underline; /* Efeito ao passar o mouse */
 }
 
-.bonfire-button:hover .bonfire-image {
-    transform: scale(1.2); /* Dá um efeito de zoom ao passar o mouse */
+/* Estilo das seções */
+section {
+    background-color: rgba(0, 0, 0, 0.7); /* Tela preta semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
 }
 
-.bonfire-text {
-    font-size: 1em;
-    font-weight: bold;
-    color: #fff;
-    margin-left: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    transition: opacity 0.3s ease;
+/* Títulos das seções */
+h2 {
+    font-size: 24px; /* Tamanho ajustado */
+    border-bottom: 2px solid #ffcc00; /* Linha dourada abaixo dos títulos */
+    padding-bottom: 5px;
 }
 
-.bonfire-button:hover .bonfire-text {
-    opacity: 0.8; /* Deixa o texto mais transparente ao passar o mouse */
+/* Estilo das listas e texto */
+ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-/* Estilo do rodapé */
+li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Rodapé */
 footer {
-    background-color: #222;
+    background-color: #000; /* Fundo preto */
+    color: white;
+    text-align: center;
     padding: 10px;
-    color: #c1c1c1;
-    font-size: 0.9em;
-    border-top: 5px solid #c1c1c1;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o rodapé */
 }
